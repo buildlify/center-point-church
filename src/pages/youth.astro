@@ -1,0 +1,66 @@
+---
+import { ArrowLongRightIcon } from '@heroicons/react/24/outline/index';
+
+import Container from '@/layouts/Container.astro';
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout title="Youth">
+  <Container title="CP Youth">
+    <div class="mt-8">
+      <div class="mb-6 flex flex-col md:flex-row md:items-center md:space-x-12">
+        <div class="flex-1">
+          <img
+            src="/kids/youth-1.jpg"
+            alt="DNA"
+            class="rounded-primary w-full object-cover"
+          />
+        </div>
+        <div class="flex-1">
+          <h2 class="font-primary mt-2 text-xl font-extrabold md:text-2xl">
+            About
+          </h2>
+          <p class="text-darkGray mb-4 md:text-lg">
+            At CP Youth, we are committed to encourage, equip, and empower young
+            people to live Christ-centered lives. We are passionate about seeing
+            youth become strong young men and young women in their journey with
+            Jesus and want all that God has for them. We believe the next
+            generation can lead the charge in their communities in advancing
+            God's mission forward on earth. We accomplish this through
+            challenging and engaging messages, passionate worship, annual camps,
+            small group discussions, and actively serving within the church.
+          </p>
+        </div>
+      </div>
+      <div class="mb-6 flex flex-col md:flex-row-reverse md:items-center">
+        <div class="flex-1">
+          <img
+            src="/kids/youth-2.jpg"
+            alt="Rooted"
+            class="rounded-primary w-full object-cover"
+          />
+        </div>
+        <div class="flex-1 md:mr-4">
+          <h2 class="font-primary mt-2 text-xl font-extrabold md:text-2xl">
+            Lead With me
+          </h2>
+          <p class="text-darkGray mb-4 md:text-lg">
+            Lead W/Me is our summer internship for youth. We believe God created
+            everyone with specific gifts that are to be used to point people to
+            him and advance His church. If you feel called to ministry, want to
+            grow as a leader, or just dive deeper into making CP Youth happen
+            then we want you to join us in Lead W/Me.
+          </p>
+        </div>
+      </div>
+      <a
+        href="https://www.instagram.com/center_point_youth/"
+        target="_blank"
+        class="text-primary font-semi-bold text-center"
+        >Stay Connected through CP Youth Instagram! <ArrowLongRightIcon
+          className="inline-block h-6 w-6"
+        />
+      </a>
+    </div>
+  </Container>
+</Layout>

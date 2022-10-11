@@ -1,0 +1,60 @@
+const sermons = [
+  {
+    slug: 'reclaiming-our-families-4',
+    title: 'Reclaiming Our Families Pt. 4',
+    speaker: 'Paul Dwyer',
+    image: '/sermons/paul-reclaim.png',
+    date: 'October 9, 2022',
+    iFrame: 'https://www.youtube.com/embed/RisssN3oEao?start=2658',
+  },
+  {
+    slug: 'reclaiming-our-families-3',
+    title: 'Reclaiming Our Families Pt. 3',
+    speaker: 'Matt Taylor',
+    image: '/sermons/matt-reclaim.png',
+    date: 'October 2, 2022',
+    iFrame: 'https://www.youtube.com/embed/XF-PrwB3syM?start=2936',
+  },
+  {
+    slug: 'reclaiming-our-families-2',
+    title: 'Reclaiming Our Families Pt. 2',
+    speaker: 'Allen Yadon',
+    image: '/sermons/allen-reclaim-2.png',
+    date: 'September 25, 2022',
+    iFrame: 'https://www.youtube.com/embed/HSFwXm8PUZM?start=2884',
+  },
+  {
+    slug: 'reclaiming-our-families',
+    title: 'Reclaiming Our Families',
+    speaker: 'Allen Yadon',
+    image: '/sermons/allen-reclaim.png',
+    date: 'September 18, 2022',
+    iFrame: 'https://www.youtube.com/embed/7DCpDL6uRsY',
+  },
+  {
+    slug: 'post-traumatic-love-disorder',
+    title: 'Post Traumatic Love Disorder',
+    speaker: 'Jeff Forbes',
+    image: '/sermons/jeff-love.png',
+    date: 'September 11, 2022',
+    iFrame: 'https://www.youtube.com/embed/VzyGdn13prU?start=2508',
+  },
+  {
+    slug: 'grow-up-to-be-like-jesus',
+    title: 'Grow Up To Be Like Jesus',
+    speaker: 'Allen Yadon',
+    image: '/sermons/allen-grow.png',
+    date: 'September 4, 2022',
+    iFrame: 'https://www.youtube.com/embed/o21eO_bdIDI?start=2594',
+  },
+  {
+    slug: 'imagine',
+    title: 'Imagine',
+    speaker: 'Monty Sears',
+    image: '/sermons/monty-imagine.png',
+    date: 'August 28, 2022',
+    iFrame: 'https://www.youtube.com/embed/9zqLX9xYnWQ?start=2678',
+  },
+];
+
+export default sermons;

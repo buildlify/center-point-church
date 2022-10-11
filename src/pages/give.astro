@@ -1,0 +1,59 @@
+---
+import Button from '@/components/Button.astro';
+import Container from '@/layouts/Container.astro';
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout title="Give">
+  <Container title="Give">
+    <div class="mt-8">
+      <h2
+        class="font-primary mt-2 text-center text-xl font-extrabold md:text-2xl"
+      >
+        Your generosity advances the vision at our church.
+      </h2>
+      <p class="text-darkGray mb-4 text-center md:text-lg">
+        “Honor the Lord with your wealth…” - Proverbs 3:9 Tithing is the first
+        ten percent of our income given to the church on a regular basis. When
+        we feel called to give over and above our tithe, we do so as an
+        offering.
+      </p>
+      <div class="mt-12 flex flex-col sm:flex-row sm:space-x-4">
+        <div class="flex-1">
+          <img src="/icons/phone.png" alt="Text to Give" class="w-12" />
+          <h3 class="font-primary mt-2 text-xl font-extrabold md:text-2xl">
+            Text to Give
+          </h3>
+          <p class="text-darkGray mb-4 md:text-lg">
+            Text any amount to <strong>84321</strong> (ex: 200 tithe) You will receive
+            a text back with a link to complete the registration process.
+          </p>
+        </div>
+        <div class="flex-1">
+          <img src="/icons/laptop.png" alt="Give Online" class="w-12" />
+          <h3 class="font-primary mt-2 text-xl font-extrabold md:text-2xl">
+            Give Online
+          </h3>
+          <p class="text-darkGray mb-4 md:text-lg">
+            Whether you would like to give a single gift or schedule ongoing
+            donations, you can do it all online using your debit or credit card.
+          </p>
+          <a href="https://centerpoint.churchcenter.com/giving" target="_blank">
+            <Button text="Give Now" classes="-mt-4 mb-4" />
+          </a>
+        </div>
+        <div class="flex-1">
+          <img src="/icons/building.png" alt="In Service" class="w-12" />
+          <h3 class="font-primary mt-2 text-xl font-extrabold md:text-2xl">
+            In Service
+          </h3>
+          <p class="text-darkGray mb-4 md:text-lg">
+            If you prefer, you can give during our weekend worship experience.
+            Drop your tithe or offering in one of the offering buckets during
+            service.
+          </p>
+        </div>
+      </div>
+    </div>
+  </Container>
+</Layout>

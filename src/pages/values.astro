@@ -1,0 +1,54 @@
+---
+import Container from '@/layouts/Container.astro';
+import Layout from '@/layouts/Layout.astro';
+
+const values = [
+  {
+    title: 'Real',
+    desc: "A relevant and truthful message of God's word to people in an ever-changing culture.",
+  },
+  {
+    title: 'Grace',
+    desc: 'We believe there is power in extending grace and forgiveness to people, just as we freely received it from Christ.',
+  },
+  {
+    title: 'Love',
+    desc: "The demonstration of Christ's example of selflessness and sacrifice through our actions and words toward others.",
+  },
+  {
+    title: 'Generosity',
+    desc: 'In Actions: Extend friendship to everyone. In Service: Use our God given gifts and talents to honor God and to serve. In Resources: Use our time and finances to reach people with the love of God.',
+  },
+  {
+    title: 'Community',
+    desc: "Fulfilling God's purpose by creating a community; unified in purpose, helpful in nature, and collaborative in equipping the people of God.",
+  },
+  {
+    title: 'Upbeat',
+    desc: 'Church is a CELEBRATION of who God is and what He has done.',
+  },
+  {
+    title: 'All In',
+    desc: '100% committed to Jesus, His Church, and reaching people.',
+  },
+];
+---
+
+<Layout title="Values">
+  <Container title="Our Values">
+    <div class="mx-auto mt-7 max-w-3xl">
+      {
+        values.map((value) => (
+          <div class="shadow-main rounded-primary mx-auto mt-8 flex w-full max-w-2xl items-center justify-between p-6">
+            <h2 class="font-primary flex-[1] text-xl font-bold md:text-2xl">
+              {value.title}
+            </h2>
+            <p class="text-darkGray flex-[1] md:flex-[2] md:text-lg">
+              {value.desc}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </Container>
+</Layout>

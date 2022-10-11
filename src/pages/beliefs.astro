@@ -1,0 +1,189 @@
+---
+import Container from '@/layouts/Container.astro';
+import Layout from '@/layouts/Layout.astro';
+
+const data = [
+  {
+    title: 'The Bible',
+    desc: 'We believe the Bible is the inspired word of God.',
+    verses: [
+      {
+        text: 'II Timothy 3:16',
+        link: 'https://www.biblegateway.com/passage/?search=2+Timothy+3%3A16&version=NIV',
+      },
+    ],
+  },
+  {
+    title: 'God',
+    desc: 'We believe in the one true God, revealed as Father, Son, and the Holy Spirit.',
+    verses: [
+      {
+        text: 'John 14:18-27',
+        link: 'https://www.biblegateway.com/passage/?search=John%2014%3A18-27&version=NIV',
+      },
+      {
+        text: 'II Corinthians 13:14',
+        link: 'https://www.biblegateway.com/passage/?search=2%20Corinthians%2013%3A14&version=NIV',
+      },
+    ],
+  },
+  {
+    title: 'God In Flesh',
+    desc: 'We believe in the virgin birth, the begotten sonship, and the deity of Jesus Christ. We believe that Jesus was both God and man.',
+    verses: [
+      {
+        text: 'I Timothy 3:16',
+        link: 'https://www.biblegateway.com/passage/?search=1%20Timothy%203%3A16&version=NIV',
+      },
+      {
+        text: 'Matthew 1:23',
+        link: 'https://www.biblegateway.com/passage/?search=Matthew+1%3A23&version=NIV',
+      },
+    ],
+  },
+  {
+    title: 'Salvation',
+    desc: 'We believe in the salvation of mankind as sinners by grace, through repentance, and by faith in the name of Jesus.',
+    verses: [
+      {
+        text: 'Ephesians 2:8-9',
+        link: 'https://www.biblegateway.com/passage/?search=Ephesians+2%3A8-9&version=NIV',
+      },
+      {
+        text: 'Hebrews 9:12-22',
+        link: 'https://www.biblegateway.com/passage/?search=Hebrews+9%3A12-22&version=NIV',
+      },
+      {
+        text: 'Romans 5:11',
+        link: 'https://www.biblegateway.com/passage/?search=Romans+5%3A11&version=NIV',
+      },
+    ],
+  },
+  {
+    title: 'Baptism',
+    desc: "We believe that water baptism is the outward expression of one's inner faith in Christ. We also believe it is God's plan for every believer to be baptized in water.",
+    verses: [
+      {
+        text: 'Matthew 28:19',
+        link: 'https://www.biblegateway.com/passage/?search=Matthew+28%3A19&version=NIV',
+      },
+      {
+        text: 'Acts 2:38',
+        link: 'https://www.biblegateway.com/passage/?search=Acts+2%3A38&version=NIV',
+      },
+      {
+        text: 'Acts 10:47-48',
+        link: 'https://www.biblegateway.com/passage/?search=Acts+10%3A47-48&version=NIV',
+      },
+    ],
+  },
+  {
+    title: 'The Holy Spirit',
+    desc: 'We believe it is the will of God for every believer to be filled with the Holy Spirit with the evidence of speaking in tongues which builds the believer up in their most holy faith.',
+    verses: [
+      {
+        text: 'Acts 1:8',
+        link: 'https://www.biblegateway.com/passage/?search=Acts+1%3A8&version=NIV',
+      },
+      {
+        text: 'Acts 19:1-6',
+        link: 'https://www.biblegateway.com/passage/?search=Acts+19%3A1-6&version=NIV',
+      },
+    ],
+  },
+  {
+    title: 'Victory',
+    desc: 'We believe that in Christ, every believer is given the power to live a victorious and overcoming life.',
+    verses: [
+      {
+        text: 'I John 5:4',
+        link: 'https://www.biblegateway.com/passage/?search=I+John+5%3A4&version=NIV',
+      },
+    ],
+  },
+  {
+    title: 'Spiritual Gifts',
+    desc: 'We believe in the operation of the gifts of the Spirit individually and corporately.',
+    verses: [
+      {
+        text: 'I Corinthians 12:1-11',
+        link: 'https://www.biblegateway.com/passage/?search=I+Corinthians+12%3A1-11&version=NIV',
+      },
+    ],
+  },
+  {
+    title: 'Healing',
+    desc: 'We believe that divine healing through the redemptive work of Christ is available for every believer.',
+    verses: [
+      {
+        text: 'James 5:14',
+        link: 'https://www.biblegateway.com/passage/?search=James+5%3A14&version=NIV',
+      },
+      {
+        text: 'I Peter 2:24',
+        link: 'https://www.biblegateway.com/passage/?search=I+Peter+2%3A24&version=NIV',
+      },
+    ],
+  },
+  {
+    title: 'Communion',
+    desc: 'We believe that communion is a time of reflection and inward examination regarding our relationship with Christ.',
+    verses: [
+      {
+        text: 'I Corinthians 11:28-32',
+        link: 'https://www.biblegateway.com/passage/?search=I+Corinthians+11%3A28-32&version=NIV',
+      },
+    ],
+  },
+  {
+    title: 'Life',
+    desc: "We believe in God's promise of eternal life for every believer.",
+    verses: [
+      {
+        text: '1 John 2:25',
+        link: 'https://www.biblegateway.com/passage/?search=1+John+2%3A25&version=NIV',
+      },
+      {
+        text: 'John 17:3',
+        link: 'https://www.biblegateway.com/passage/?search=John+17%3A3&version=NIV',
+      },
+      {
+        text: 'Titus 1:2',
+        link: 'https://www.biblegateway.com/passage/?search=Titus+1%3A2&version=NIV',
+      },
+      {
+        text: '1 John 5:11-13',
+        link: 'https://www.biblegateway.com/passage/?search=1+John+5%3A11-13&version=NIV',
+      },
+    ],
+  },
+];
+---
+
+<Layout title="Beliefs">
+  <Container title="Our Beliefs">
+    <div class="mx-auto mt-7 max-w-3xl">
+      {
+        data.map((item) => (
+          <div class="mt-5">
+            <h3 class="font-primary text-xl font-bold md:text-2xl">
+              {item.title}
+            </h3>
+            <p class="text-darkGray md:text-lg">{item.desc}</p>
+            <div class="mt-1 space-x-2">
+              {item.verses.map((verse) => (
+                <a
+                  class="bg-gray rounded-primary inline-block w-fit px-2 py-1 text-xs font-semibold transition-all hover:scale-[1.03] md:text-sm"
+                  href={verse.link}
+                  target="_blank"
+                >
+                  {verse.text}
+                </a>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </Container>
+</Layout>

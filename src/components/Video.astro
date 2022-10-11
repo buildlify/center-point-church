@@ -1,0 +1,33 @@
+---
+import Button from './Button.astro';
+---
+
+<section
+  class="flex h-[600px] flex-col items-center justify-center text-center text-white"
+>
+  <video
+    autoplay
+    loop
+    muted
+    class="absolute -z-10 h-[600px] w-full overflow-hidden object-cover"
+  >
+    <source src="/videos/main.mp4" type="video/mp4" />
+  </video>
+  <h1
+    class="font-primary drop-shadow-3xl text-3xl font-extrabold sm:text-4xl md:text-4xl lg:text-5xl"
+  >
+    Center Point Church
+  </h1>
+  <p class="drop-shadow-3xl text-xl font-semibold lg:text-2xl">
+    Leading people to Christ-centered lives
+  </p>
+  <div class="mt-5 space-x-2">
+    <a
+      href="https://www.youtube.com/channel/UCGcnYRFTjfmNQR3XQHfzPSQ/featured"
+      target="_blank"
+      ><Button text="Online" classes="lg:text-xl" />
+    </a>
+
+    <a href="/im-new"> <Button text="I'm New" classes="lg:text-xl" /></a>
+  </div>
+</section>

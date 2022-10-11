@@ -1,0 +1,109 @@
+---
+import Button from './Button.astro';
+---
+
+<footer class="mt-12 flex flex-col bg-black p-4 text-white">
+  <div class="mx-auto w-full max-w-3xl">
+    <div
+      class="mb-8 flex flex-col items-center justify-center md:flex-row-reverse md:justify-between"
+    >
+      <div class="mb-2 flex items-center space-x-6">
+        <a
+          href="https://www.youtube.com/channel/UCGcnYRFTjfmNQR3XQHfzPSQ/featured"
+          target="_blank"
+        >
+          <img src="/logos/youtube.png" alt="Youtube" class="w-14" />
+        </a>
+        <a href="https://www.facebook.com/cpc.meridian/" target="_blank">
+          <img src="/logos/facebook.png" alt="Facebook" class="w-10" />
+        </a>
+        <a href="https://www.instagram.com/cp.church/" target="_blank">
+          <img src="/logos/instagram.png" alt="Instagram" class="w-10" />
+        </a>
+      </div>
+      <h4 class="text-primary text-4xl font-bold">Sunday 11AM</h4>
+    </div>
+  </div>
+  <div
+    class="mx-auto flex max-w-4xl flex-col justify-center space-x-8 lg:flex-row"
+  >
+    <div class="flex w-full max-w-lg flex-col items-center justify-center">
+      <h4 class="text-2xl font-bold">Cole Valley High</h4>
+      <a
+        href="https://www.google.com/maps/place/Center+Point+Church+(Christian)/@43.614135,-116.390099,17z/data=!3m1!4b1!4m5!3m4!1s0x54ae54268382f8af:0x45cd256e981b9cf5!8m2!3d43.6140691!4d-116.390101"
+        target="_blank"
+        class="mb-1">200 E Carlton Ave. Meridian ID 83646</a
+      >
+      <img
+        src="/og-image.png"
+        alt="Cole Valley Christain High School"
+        class="mx-auto w-full object-cover"
+      />
+      <div class="mx-auto flex w-full max-w-md flex-col">
+        <a
+          href="https://centerpoint.churchcenter.com/people/forms/318364"
+          target="_blank"
+          ><Button text="I Need Prayer" classes="mt-2 w-full" />
+        </a>
+        <a href="mailto:info@go2centerpoint.com" target="_blank">
+          <Button text="Contact Us" classes="mt-2 w-full" />
+        </a>
+        <a
+          href="https://centerpoint.churchcenter.com/people/forms/289697"
+          target="_blank"
+        >
+          <Button text="Join A Team" classes="mt-2 w-full" />
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="mx-auto mt-8 flex w-[80%] max-w-md justify-between lg:flex-col lg:text-xl"
+    >
+      <div class="flex flex-col">
+        <h5 class="text-primary font-bold">Ministries</h5>
+        <a href="/kids">Kids</a>
+        <a href="/youth">Youth</a>
+      </div>
+      <div class="flex flex-col lg:mt-6">
+        <h5 class="text-primary font-bold">About</h5>
+        <a href="/beliefs">Beliefs</a>
+        <a href="/leadership">Leadership</a>
+        <a href="/outreach">Outreach</a>
+      </div>
+    </div>
+    <div
+      class="mx-auto mt-8 flex w-[80%] max-w-md justify-between lg:flex-col lg:text-xl"
+    >
+      <div class="flex flex-col">
+        <h5 class="text-primary font-bold">Connnect</h5>
+        <a href="/growth-track">Growth Track</a>
+        <a href="/growth-track#baptism">Baptism</a>
+        <a
+          href="https://centerpoint.churchcenter.com/people/forms/318364"
+          target="_blank">I Need Prayer</a
+        >
+      </div>
+      <div class="flex flex-col lg:mt-6">
+        <h5 class="text-primary font-bold">More</h5>
+        <a href="/sermons">Sermons</a>
+        <a href="/resources">Resources</a>
+        <a
+          href="https://centerpoint.churchcenter.com/registrations"
+          target="_blank">Events</a
+        >
+        <a href="/give">Give</a>
+      </div>
+    </div>
+  </div>
+  <div
+    class="lg:text-md mt-8 flex flex-col items-center justify-center lg:mt-12"
+  >
+    <a href="tel:208-559-5006">208-559-5006</a>
+    <p>PO Box 613, Meridian, ID 83680</p>
+    <a
+      href="https://www.google.com/maps/place/280+S+Academy+Ave+%23130,+Eagle,+ID+83616/@43.692521,-116.3390144,17z/data=!3m1!4b1!4m5!3m4!1s0x54afaaa95e5d5e77:0xcbc4b1a6a8b29785!8m2!3d43.692521!4d-116.3368257"
+      target="_blank">280 S Academy Ave #130, Eagle, ID 83616</a
+    >
+  </div>
+</footer>

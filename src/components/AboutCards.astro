@@ -1,0 +1,40 @@
+---
+import { ArrowLongRightIcon } from '@heroicons/react/24/outline/index';
+
+const data = [
+  {
+    title: 'Outreach',
+    desc: 'How we serve',
+    image: '/home/outreach.jpg',
+    link: '/outreach',
+  },
+  {
+    title: 'Our Beliefs',
+    desc: 'Learn the heart of CPC',
+    image: '/home/our-beliefs.jpg',
+    link: '/beliefs',
+  },
+  {
+    title: 'Growth Track',
+    desc: 'How we stay connected',
+    image: '/home/growth-track.jpg',
+    link: '/growth-track',
+  },
+];
+---
+
+<section
+  class="mx-auto mt-8 flex w-[95%] max-w-7xl flex-col items-center justify-center lg:flex-row"
+>
+  {
+    data.map((item) => (
+      <div class="shadow-main rounded-primary m-4 w-full max-w-xl bg-white p-4 md:w-3/5 lg:w-full">
+        <img src={item.image} alt={item.title} class="rounded-t-primary" />
+        <h3 class="text-xl font-bold ">{item.title}</h3>
+        <a href={item.link} class="text-primary ">
+          {item.desc} <ArrowLongRightIcon className="inline-block h-6 w-6" />
+        </a>
+      </div>
+    ))
+  }
+</section>

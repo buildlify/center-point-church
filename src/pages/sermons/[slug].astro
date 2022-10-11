@@ -1,0 +1,43 @@
+---
+import Button from '@/components/Button.astro';
+import sermons from '@/data/sermons';
+import Layout from '@/layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  return sermons.map((sermon) => ({
+    params: {
+      slug: sermon.slug,
+    },
+    props: {
+      sermon,
+    },
+  }));
+}
+
+const { sermon } = Astro.props;
+---
+
+<Layout title={sermon.title}>
+  <main>
+    <div class="bg-sermon px-2 pt-24 text-white">
+      <div class="mx-auto w-full max-w-3xl pb-4">
+        <iframe
+          src={sermon.iFrame}
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          class="rounded-primary aspect-video w-full"
+          allowfullscreen></iframe>
+        <div class="mt-2 flex justify-between pb-4">
+          <div>
+            <h1 class="font-primary text-lg font-bold md:text-2xl">
+              {sermon.title}
+            </h1>
+            <h2 class="text-sm md:text-lg">{sermon.speaker}</h2>
+          </div>
+          <p class="text-sm md:text-lg">{sermon.date}</p>
+        </div>
+        <a href="/sermons"><Button text="View More Sermons" /></a>
+      </div>
+    </div>
+  </main>
+</Layout>

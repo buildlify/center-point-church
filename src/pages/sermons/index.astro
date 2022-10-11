@@ -1,0 +1,72 @@
+---
+import Button from '@/components/Button.astro';
+import sermons from '@/data/sermons';
+import Container from '@/layouts/Container.astro';
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout title="Sermons">
+  <Container title="Sermons">
+    <a
+      href={`/sermons/${sermons[0]?.slug}`}
+      class="relative mx-auto block w-full max-w-4xl p-4"
+    >
+      <img
+        src={sermons[0]?.image}
+        alt={sermons[0]?.title}
+        class="rounded-primary"
+      />
+      <div
+        class="bg-grayish rounded-secondary absolute top-8 left-8 px-4 py-1 text-sm font-bold text-white md:text-lg"
+      >
+        Latest Sermon
+      </div>
+      <div class="mt-2 flex justify-between">
+        <div>
+          <h2 class="font-primary -mb-1 text-xl font-semibold md:text-2xl">
+            {sermons[0]?.title}
+          </h2>
+          <p class="text-darkGray md:text-lg">{sermons[0]?.speaker}</p>
+        </div>
+      </div>
+    </a>
+    <h2
+      class="font-primary mt-8 text-center text-xl font-extrabold md:mb-2 md:text-2xl"
+    >
+      Recent Sermons
+    </h2>
+    <div class="flex flex-wrap">
+      {
+        sermons.map((sermon, index) => {
+          if (index === 0) return <div />;
+          return (
+            <a
+              href={`/sermons/${sermon.slug}`}
+              class="mx-auto block w-full max-w-xl p-4"
+            >
+              <img
+                src={sermon.image}
+                alt={sermon.title}
+                class="rounded-primary w-full"
+              />
+              <div class="mt-2 flex justify-between">
+                <div>
+                  <h2 class="font-primary -mb-1 text-xl font-semibold md:text-2xl">
+                    {sermon.title}
+                  </h2>
+                  <p class="text-darkGray md:text-lg">{sermon.speaker}</p>
+                </div>
+              </div>
+            </a>
+          );
+        })
+      }
+    </div>
+    <a
+      href="https://www.youtube.com/channel/UCGcnYRFTjfmNQR3XQHfzPSQ"
+      target="_blank"
+      class="mx-auto mt-4 block w-fit lg:mt-8"
+      ><Button text="More Sermons" />
+    </a>
+  </Container>
+</Layout>

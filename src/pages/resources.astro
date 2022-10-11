@@ -1,0 +1,135 @@
+---
+import { ArrowLongRightIcon } from '@heroicons/react/24/outline/index';
+
+import Book from '@/components/Book.astro';
+import Container from '@/layouts/Container.astro';
+import Layout from '@/layouts/Layout.astro';
+
+const books = [
+  {
+    title: 'Miracle Worker',
+    author: 'Nick Toves',
+    desc: 'Miracle Worker is a devotional journal on discovering Jesus.',
+    image: 'book-1.jpg',
+    link: '#',
+  },
+  {
+    title: 'Put Your Money Where Your Faith Is',
+    author: 'Terry Brown',
+    desc: 'The financial freedom and blessing that you desire are inside this book.',
+    image: 'book-2.jpg',
+    link: '#',
+  },
+  {
+    title: 'How to Win After Loss',
+    author: 'Fleda Bennie',
+    desc: 'This book is about winning after losing and doing it with dignity and in victory.',
+    image: 'book-5.jpg',
+    link: '#',
+  },
+];
+
+const extraBooks = [
+  {
+    title: 'Toward Greater Growth',
+    author: 'Paul Dwyer',
+    desc: ' Jesus directed us to build our spiritual house on the wise foundation of hearing and acting upon his words.',
+    image: 'book-3.jpg',
+    link: '#',
+  },
+  {
+    title: 'Following Jesus',
+    author: 'Samuel Deuth',
+    desc: 'This book focuses on drawing from the Bible the seven essentials to following Jesus.',
+    image: 'book-4.jpg',
+    link: '#',
+  },
+];
+---
+
+<Layout title="Resources">
+  <Container title="Resources">
+    <div class="mx-auto mt-7 max-w-3xl">
+      <h2 class="font-primary mt-5 text-xl font-extrabold md:text-2xl">
+        Books
+      </h2>
+      <p class="text-darkGray mb-4 md:text-lg">
+        These books have been written by pastors and people from our church that
+        will be a great inspiration, encouragement, and blessing to all that
+        read. Get your copy today!
+      </p>
+      {books.map((book) => <Book book={book} />)}
+      <p class="text-darkGray mt-10 -mb-5 md:text-lg">
+        Here are other books written by authors that we feel would be of great
+        help and encouragement.
+      </p>
+
+      {extraBooks.map((book) => <Book book={book} />)}
+      <h2 class="font-primary mt-12 text-xl font-extrabold md:text-2xl">
+        Music
+      </h2>
+      <p class="text-darkGray mb-4 md:text-lg">
+        Check out our Center Point Worship Playlists!
+      </p>
+
+      <div class="flex items-center space-x-2 font-bold">
+        <img
+          src="/resources/cpc-worship.jpg"
+          alt="Jermey and Mindi DeFrees Music"
+          class="aspect-square w-32 rounded-full object-cover"
+        />
+        <div class="flex flex-col">
+          <h2 class="text-lg">Center Point Worship</h2>
+          <div class="mt-2 flex flex-col items-start">
+            <a
+              href="https://open.spotify.com/artist/5hX4BPFhnJ9oUX5PKpfvRC?si=nRZN1SFGSJi5wTTW__2NrQ&dl_branch=1&nd=1"
+              target="_blank"
+              class="text-spotify flex items-center justify-center text-sm"
+              >Open Spotify <ArrowLongRightIcon
+                className="inline-block h-6 w-6"
+              />
+            </a>
+            <a
+              href="https://music.apple.com/us/artist/center-point-worship/1493254015"
+              target="_blank"
+              class="text-appleMusic mt-1 flex items-center justify-center text-sm"
+            >
+              Open Apple Music <ArrowLongRightIcon
+                className="inline-block h-6 w-6"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 flex items-center space-x-2 font-bold">
+        <img
+          src="/resources/jer-min.jpeg"
+          alt="Jermey and Mindi DeFrees Music"
+          class="aspect-square w-32 rounded-full object-cover"
+        />
+        <div class="flex flex-col">
+          <h2 class="text-lg">Jeremy & Mindi DeFrees</h2>
+          <div class="mt-2 flex flex-col items-start">
+            <a
+              href="https://open.spotify.com/artist/7oLSysLGjmd2fkO8ZDWSze?si=iICHMGzjQtaAHBrY4qtJUw&dl_branch=1&nd=1"
+              target="_blank"
+              class="text-spotify flex items-center justify-center text-sm"
+              >Open Spotify <ArrowLongRightIcon
+                className="inline-block h-6 w-6"
+              />
+            </a>
+            <a
+              href="https://music.apple.com/us/artist/jeremy-and-mindi-defrees/709983965"
+              target="_blank"
+              class="text-appleMusic mt-1 flex items-center justify-center text-sm"
+            >
+              Open Apple Music <ArrowLongRightIcon
+                className="inline-block h-6 w-6"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+</Layout>

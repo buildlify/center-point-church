@@ -1,0 +1,59 @@
+---
+import Button from '@/components/Button.astro';
+import OutreachCard from '@/components/OutreachCard.astro';
+import Container from '@/layouts/Container.astro';
+import Layout from '@/layouts/Layout.astro';
+
+const items = [
+  {
+    title: 'Boise Rescue Mission',
+    desc: 'A nonprofit organization we support monthly that is committed to meeting the physical, emotional, mental, and spiritual needs of homeless and addicted individuals in the Boise and Nampa, ID areas.',
+    link: 'https://boiserm.org/',
+  },
+  {
+    title: 'Police Appreciation',
+    desc: 'We appreciate those who serve and protect our community. Every day they go above and beyond what is expected in the line of duty. Our church has expressed our gratitude by sending gift baskets to several police departments in our area.',
+  },
+  {
+    title: 'Athletes In Action',
+    desc: "An organization that we financially contribute monthly to that helps athletes experience the hope and purpose that comes from following Jesus, and equipping them to use their platform to be part of God's mission in the world to make disciples of all nations.",
+    link: 'https://athletesinaction.org/',
+  },
+  {
+    title: 'Ministerio Cristiano Esperanza y Vida',
+    desc: 'Our church supports this community of believers located in Buenos Aires, Argentina monthly. Pastor Alberto, his family, and their church, are reaching people in South America.',
+  },
+  {
+    title: 'Support Our Soldiers',
+    desc: 'For the last two years, our church has come together during the holiday season to support our troops. Support Our Soldiers makes the connection between the community and military by sending custom care boxes, supplies, and letters of support to our soldiers deployed overseas to show them they are loved and not forgotten.',
+    link: 'https://supportoursoldier.com/',
+  },
+  {
+    title: 'Grace Wave',
+    desc: 'Grace wave is not only about paradise, it is also about purpose. We specialize in offering our guests warm hospitality and opportunities to give back to the underprivileged. Nias is predominantly a Christian island. We serve through community development, acts of compassion and Christian discipleship.',
+    link: 'https://gracewave.com/',
+  },
+];
+---
+
+<Layout title="Outreach">
+  <Container title="Outreach">
+    <h2
+      class="font-primary mb-2 mt-8 text-center text-xl font-extrabold md:text-3xl"
+    >
+      Supported Outreaches
+    </h2>
+
+    <div class="flex flex-wrap justify-center">
+      {items.map((item) => <OutreachCard item={item} />)}
+    </div>
+
+    <h2 class="font-primary mt-5 text-xl font-extrabold md:text-2xl">More</h2>
+    <p class="text-darkGray mb-4 md:text-lg">
+      Keep up to date on all of our outreach happening at our church!
+    </p>
+    <a href="https://centerpoint.churchcenter.com/registrations" target="_blank"
+      ><Button text="Upcoming Events" />
+    </a>
+  </Container>
+</Layout>

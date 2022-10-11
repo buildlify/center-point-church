@@ -1,0 +1,21 @@
+---
+const { book } = Astro.props;
+---
+
+<div class="mt-10 flex justify-between">
+  <img
+    src={`/resources/${book.image}`}
+    alt={`${book.title}, ${book.author}`}
+    class="w-28 shadow-inner sm:w-40"
+  />
+  <div class="ml-2 flex w-full flex-col justify-between">
+    <div>
+      <h3 class="text-lg font-bold leading-5 sm:text-2xl">{book.title}</h3>
+      <h4 class="text-md sm:text-lg">{book.author}</h4>
+    </div>
+    <p class="sm:text-lg">{book.desc}</p>
+    <div>
+      <a href={book.link} class="text-primary sm:text-lg">View On Amazon</a>
+    </div>
+  </div>
+</div>

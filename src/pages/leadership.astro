@@ -1,0 +1,137 @@
+---
+import LeadershipCard from '@/components/LeadershipCard.astro';
+import Container from '@/layouts/Container.astro';
+import Layout from '@/layouts/Layout.astro';
+
+const leadTeam = [
+  {
+    name: 'Allen Yadon',
+    role: 'Lead Pastor',
+    img: 'allen.jpg',
+  },
+  {
+    name: 'Sharon Yadon',
+    role: 'Lead Pastor & Guest Services',
+    img: 'sharon.jpg',
+  },
+  {
+    name: 'Jeremy DeFrees',
+    role: 'Operations & Worship Pastor',
+    img: 'jeremy.jpg',
+  },
+  {
+    name: 'Mindi DeFrees',
+    role: 'Worship Pastor',
+    img: 'mindi.jpg',
+  },
+  {
+    name: 'Anthony Yadon',
+    role: "Youth Pastor & Men's Ministry Director",
+    img: 'anthony.jpg',
+  },
+  {
+    name: 'Nick Toves',
+    role: 'Communications Pastor',
+    img: 'nick.jpg',
+  },
+];
+
+const ministryDirectors = [
+  {
+    name: 'Deanna Toves',
+    role: 'Social Media Director & Photography',
+    img: 'deanna.jpg',
+  },
+  {
+    name: 'Neil & Jill Jansen',
+    role: 'Rooted (Discipleship) Directors',
+    img: 'neil-jill.jpg',
+  },
+  {
+    name: 'Terry Brown',
+    role: 'Kingdom Builders Director',
+    img: 'terry.jpg',
+  },
+  {
+    name: 'David Anes',
+    role: 'Production Director',
+    img: 'david.jpg',
+  },
+  {
+    name: 'Michael Lucas',
+    role: 'Outreach Director',
+    img: 'michael.jpg',
+  },
+  {
+    name: 'Kiel Lewis',
+    role: 'Facilities Coordinator',
+    img: 'kiel.jpg',
+  },
+  {
+    name: 'Dan & Connie Kimball',
+    role: 'Prayer & Member Care Directors',
+    img: 'dan-connie.jpg',
+  },
+];
+
+const administrativeStaff = [
+  {
+    name: 'Linda Wilson',
+    role: 'Communications & Database Manager',
+    img: 'linda.jpg',
+  },
+];
+---
+
+<Layout title="Leadership">
+  <Container title="Leadership">
+    <div class="mx-auto mt-7 max-w-3xl">
+      <h2 class="font-primary mt-5 text-xl font-extrabold md:text-2xl">
+        Lead Team
+      </h2>
+      <p class="text-darkGray mb-4 md:text-lg">
+        Our Lead Team members oversee the visionary leadership and ministries of
+        Center Point Church. The team is comprised of both full time and part
+        time pastoral positions. Their role encompasses ministry director
+        guidance, team development, church growth and planning, Growth Track
+        leadership, speaking, and teaching the congregation. Lead team members
+        oversee multiple leaders and areas of ministry.
+      </p>
+      <div
+        class="flex flex-col flex-wrap items-center justify-center sm:flex-row"
+      >
+        {leadTeam.map((person) => <LeadershipCard person={person} />)}
+      </div>
+      <h2 class="font-primary mt-5 text-xl font-extrabold md:text-2xl">
+        Ministry Directors
+      </h2>
+      <p class="text-darkGray mb-4 md:text-lg">
+        Our Ministry Directors serve in part time and volunteer leadership
+        positions, overseeing one area of ministry, and assist in leading our
+        Growth Track ministries.
+      </p>
+      <div
+        class="flex flex-col flex-wrap items-center justify-center sm:flex-row"
+      >
+        {ministryDirectors.map((person) => <LeadershipCard person={person} />)}
+      </div>
+      <h2 class="font-primary mt-5 text-xl font-extrabold md:text-2xl">
+        Administrative Staff
+      </h2>
+      <p class="text-darkGray mb-4 md:text-lg">
+        Our Administrative Staff, comprised of part time staff members, serve
+        Center Point Church behind the scenes through organization, clarity, and
+        communication.
+      </p>
+      <div
+        class="flex flex-col flex-wrap items-center justify-center sm:flex-row"
+      >
+        {
+          administrativeStaff.map((person) => (
+            <LeadershipCard person={person} />
+          ))
+        }
+      </div>
+    </div>
+  </Container>
+</Layout>

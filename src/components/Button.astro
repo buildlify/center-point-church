@@ -1,0 +1,13 @@
+---
+export interface Props {
+  text: string;
+  classes?: string;
+}
+
+const { text, classes } = Astro.props;
+---
+
+<button
+  class={`bg-primary rounded-primary hover:bg-primaryDark py-2 px-6 text-sm font-bold tracking-wide text-white transition-all hover:-translate-y-[0.1rem] ${classes}`}
+  >{text}
+</button>

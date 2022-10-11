@@ -1,0 +1,122 @@
+---
+import { ArrowLongRightIcon } from '@heroicons/react/24/outline/index';
+
+import Button from '@/components/Button.astro';
+import Container from '@/layouts/Container.astro';
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout title="Growth Track">
+  <Container title="Growth Track">
+    <div class="mt-8">
+      <div class="mb-6 flex flex-col md:flex-row md:items-center md:space-x-12">
+        <div class="flex-1">
+          <img
+            src="/growth-track/dna.jpg"
+            alt="DNA"
+            class="rounded-primary w-full object-cover"
+          />
+        </div>
+        <div class="flex-1">
+          <h2 class="font-primary mt-2 text-xl font-extrabold md:text-2xl">
+            DNA
+          </h2>
+          <p class="text-darkGray mb-4 md:text-lg">
+            <strong> Be a part of the family and join the team.</strong> This course
+            covers the vision, mission, core values, statement of faith, and leadership
+            structure. It also shows the different ministries available so that you
+            become part of the life of the church! The course is a prerequisite to
+            serve on any ministry team. DNA is held on a quarterly basis (January,
+            April, July, October and registration is required.)
+          </p>
+        </div>
+      </div>
+      <div class="mb-6 flex flex-col md:flex-row-reverse md:items-center">
+        <div class="flex-1">
+          <img
+            src="/growth-track/rooted.jpg"
+            alt="Rooted"
+            class="rounded-primary w-full object-cover"
+          />
+        </div>
+        <div class="flex-1 md:mr-4">
+          <h2 class="font-primary mt-2 text-xl font-extrabold md:text-2xl">
+            Rooted
+          </h2>
+          <p class="text-darkGray mb-4 md:text-lg">
+            Rooted is a 10-week small group experience designed to connect you
+            to God, the church, and your purpose. Together, in a group of 10-15
+            people from all walks of life, you'll explore the Bible, engage in
+            prayer and serve experiences, share stories, and practice rhythms
+            essential to a healthy spiritual life.
+          </p>
+          <a
+            href="https://www.youtube.com/playlist?list=PLfOnFM--C3Of3uvZwZGjYVY0SYt48k1xz"
+            target="_blank"
+          >
+            <Button text="Rooted Stories" classes="-mt-4" />
+          </a>
+        </div>
+      </div>
+      <div class="mb-6 flex flex-col md:flex-row md:items-center md:space-x-12">
+        <div class="flex-1">
+          <img
+            src="/growth-track/prayer.jpg"
+            alt="Prayer"
+            class="rounded-primary w-full object-cover"
+          />
+        </div>
+        <div class="flex-1">
+          <h2 class="font-primary mt-2 text-xl font-extrabold md:text-2xl">
+            Men's & Women's Prayer
+          </h2>
+          <p class="text-darkGray mb-4 md:text-lg">
+            <span class="text-primary font-bold">Men:</span> On the first and third
+            Tuesday mornings of each month, Center Point men will come together for
+            prayer. We will pray together, pray for each other, our families, our
+            church, and our nation. We will also share personal victories and encourage
+            one another.
+          </p>
+          <p class="text-darkGray mb-4 md:text-lg">
+            <span class="text-primary font-bold">Women:</span> The first Tuesday
+            evening of each month, Center Point ladies will come together to pray
+            for the church and for each other. Corporate prayer was important to
+            the early church and it is still important today.
+          </p>
+        </div>
+      </div>
+      <div class="mb-6 flex flex-col md:flex-row-reverse md:items-center">
+        <div class="flex-1">
+          <img
+            src="/growth-track/baptism.png"
+            alt="Baptism"
+            class="rounded-primary w-full object-cover"
+          />
+        </div>
+
+        <div class="flex-1 md:mr-4" id="baptism">
+          <h2 class="font-primary mt-2 text-xl font-extrabold md:text-2xl">
+            Water Baptism
+          </h2>
+          <p class="text-darkGray mb-4 md:text-lg">
+            Water baptism is the outward confirmation of the inward commitment
+            you have made to Christ. Water baptism is offered on the fourth
+            Sunday, every other month.
+          </p>
+          <a
+            href="https://centerpoint.churchcenter.com/registrations/events/1448798"
+            target="_blank"
+          >
+            <Button text="Sign Up" classes="-mt-4" />
+          </a>
+          <a
+            href="https://www.go2centerpoint.com/baptism.pdf"
+            target="_blank"
+            class="text-primary ml-2"
+            >Learn More <ArrowLongRightIcon className="inline-block h-6 w-6" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </Container>
+</Layout>

@@ -1,0 +1,24 @@
+---
+import sermons from '@/data/sermons';
+
+import Button from './Button.astro';
+---
+
+<section class="mx-auto mt-10 max-w-7xl">
+  <h2
+    class="font-primary text-center text-2xl font-bold uppercase md:text-3xl lg:text-4xl"
+  >
+    Latest Sermon
+  </h2>
+  <img
+    src={`${sermons[0]?.image}`}
+    alt={`${sermons[0]?.title} | ${sermons[0]?.speaker}`}
+    class="rounded-primary my-3 mx-auto w-[90%] sm:w-2/3"
+  />
+  <a href={`/sermons/${sermons[0]?.slug}`}>
+    <Button
+      text="Watch Now"
+      classes={'w-[90%] mx-auto block sm:w-2/3 md:text-xl'}
+    />
+  </a>
+</section>
